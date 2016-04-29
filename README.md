@@ -116,3 +116,66 @@ Closures are functions that refer to independent (free) variables. In other word
 
 	src: https://developer.mozilla.org/en/docs/Web/JavaScript/Closures
 
+#### Diff. in function Person(){}, var person = Person(), and var person = new Person()
+
+- function Person() {} 
+	- Declares a function (but does not execute it).
+	- It will usually have some code between the curly brackets.
+
+- var person = Person()
+	- Declares a variable (person), invokes a function (Person) and sets the value of person to the return of the function.
+
+- var person = new Person()
+	- Creates a new instance of an object based on the Person function. 
+	- So the variable (person) is now an Object, not just a string or a number.
+
+#### What's the difference between .call and .apply
+
+The difference is that apply lets you invoke the function with arguments as an array; call requires the parameters be listed explicitly.
+
+Syntax:
+
+	theFunction.apply(valueForThis, arrayOfArgs)
+
+	theFunction.call(valueForThis, arg1, arg2, ...)
+
+	src: 
+		http://hangar.runway7.net/javascript/difference-call-apply
+		http://stackoverflow.com/questions/1986896/what-is-the-difference-between-call-and-apply
+
+#### Anonymous Function:
+An anonymous function is a function that was declared without any named identifier to refer to it. As such, an anonymous function is usually not accessible after its initial creation.
+
+Normal function definition:
+
+	function hello() {
+	  alert('Hello world');
+	}
+	hello();
+
+Anonymous function definition:
+
+	var anon = function() {
+	  alert('I am anonymous');
+	};
+	anon();
+
+or 
+
+	setTimeout(function() {
+	  alert('hello');
+	}, 1000);
+
+	src: https://en.wikibooks.org/wiki/JavaScript/Anonymous_Functions
+
+#### window.onload vs document.ready()
+
+The ready event occurs after the HTML document has been loaded, while the onload event occurs later, when all content (e.g. images) also has been loaded.
+
+The onload event is a standard event in the DOM, while the ready event is specific to jQuery. The purpose of the ready event is that it should occur as early as possible after the document has loaded, so that code that adds functionality to the elements in the page doesn't have to wait for all content to load.
+
+	src: http://stackoverflow.com/questions/3698200/window-onload-vs-document-ready
+
+
+
+	
