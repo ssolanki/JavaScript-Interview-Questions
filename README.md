@@ -176,6 +176,8 @@ The onload event is a standard event in the DOM, while the ready event is specif
 
 	src: http://stackoverflow.com/questions/3698200/window-onload-vs-document-ready
 
+#### immutability un javascript
+String and numbers are immutable while array and obj are mutable, see here for detail explanation.
 
-
+	src: https://www.sitepoint.com/immutability-javascript/
 	
